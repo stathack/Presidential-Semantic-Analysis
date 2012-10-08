@@ -16,9 +16,10 @@ president<-function(x){
     result$candidate<-as.factor(result$candidate)
     cresult<-ddply(result, .(candidate),summarise, score.mean=mean(score))
     p<-ggplot(result, aes(x=score, fill=candidate)) +
-        geom_histogram(binwidth=.5, alpha=.5, position="identity") +
+        geom_histogram(binwidth=1, alpha=.5, position="identity") +
         geom_vline(data=cresult, aes(xintercept=score.mean,  colour=candidate),
                    linetype="dashed", size=1)
     print(p)
-    return(cresult)
+    return(result)
 }
+
