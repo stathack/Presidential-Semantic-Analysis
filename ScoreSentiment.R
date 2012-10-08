@@ -12,7 +12,7 @@ score.sentiment<-function(sentences, pos.words, neg.words, .progress='none')
         sentence  =  gsub('[[:cntrl:]]', '', sentence)
         sentence  =  gsub('\\d+', '', sentence)
         # and convert to lower case:
-        senctences=tolower(sentence)
+        sentence  =  tolower(sentence)
         # split into words. str_split is in the stringr package
         word.list  =  str_split(sentence, '\\s+')
         # sometimes a list() is one level of hierarchy too much
