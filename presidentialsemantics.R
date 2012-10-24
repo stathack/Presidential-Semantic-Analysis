@@ -1,4 +1,3 @@
-install.packages('twitteR', dependencies=T)
 library("twitteR")
 library("reshape2")
 library("ggplot2")
